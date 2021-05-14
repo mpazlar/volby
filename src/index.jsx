@@ -30,9 +30,13 @@ const App = () => {
       
       <h2>Kandidátí</h2>
       <div className="candidate-list">
-        {candidates.map(
-          (c) => <Candidate name={c.name} avatar={c.avatar} />
-        )}
+        {candidates.map((c) => (
+          <Candidate 
+            key={c.name}
+            name={c.name} 
+            avatar={c.avatar} 
+          />
+        ))}
       </div>
     </div>
   );
