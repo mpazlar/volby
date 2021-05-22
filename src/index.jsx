@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { render } from 'react-dom';
 import Candidate from './Candidate/index';
 import './style.css';
+import Castle from './Castle';
 
 const App = () => {
   const [candidates, setCandidates] = useState([]);
@@ -24,16 +25,7 @@ const App = () => {
 
   return (
     <div className="container">
-      <div className="castle">
-        <div className="castle__image"></div>
-        <div className="castle__body">
-          <h1>Nový prezident</h1>
-          <p className="castle__president">
-            {president === null ? 'Vyberte svého kandidáta' : president}
-          </p>
-        </div>
-      </div>
-
+      <Castle president={president} />
       <h2>Kandidáti</h2>
       <div className="candidate-list">
         {candidates.map((c) => (
